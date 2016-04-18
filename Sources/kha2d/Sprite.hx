@@ -8,7 +8,7 @@ import kha.math.Matrix3;
 import kha.math.Vector2;
 
 @:expose
-class Sprite {
+class Sprite{
 	private var image: Image;
 	private var animation: Animation;
 	private var collider: Rectangle;
@@ -35,6 +35,7 @@ class Sprite {
 	var tempcollider: Rectangle;
 	
 	public function new(image: Image, width: Int = 0, height: Int = 0, z: Int = 1) {
+		
 		this.image = image;
 		x = 0;
 		y = 0;

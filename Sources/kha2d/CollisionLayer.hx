@@ -137,7 +137,7 @@ class CollisionLayer {
 				err -= dy;
 				x0 += sx;
 				sprite.x = x0;
-				if (map.collides(sprite)) {
+				if (map != null && map.collides(sprite)) {
 					sprite.y -= 1;
 					if (!map.collides(sprite)) {
 						continue;
@@ -181,7 +181,7 @@ class CollisionLayer {
 				err += dx;
 				y0 += sy; 
 				sprite.y = y0;
-				if (map.collides(sprite)) {
+				if (map != null && map.collides(sprite)) {
 					sprite.y -= sy;
 					if (sy < 0) sprite.hitFrom(Direction.DOWN);
 					else sprite.hitFrom(Direction.UP);
@@ -241,7 +241,7 @@ class CollisionLayer {
 			var ystart = sprite.y;
 			sprite.x = xaim;
 			sprite.y = yaim;
-			if (map.collides(sprite)) {
+			if (map != null && map.collides(sprite)) {
 				line(xstart, ystart, xaim, yaim, sprite);
 			}
 
